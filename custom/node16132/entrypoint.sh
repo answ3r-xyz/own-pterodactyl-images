@@ -1,7 +1,7 @@
 #!/bin/bash
 cd /home/container
 
-# Set environment variable that holds the Internal Docker IP
+# Make internal Docker IP address available to processes.
 INTERNAL_IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
 export INTERNAL_IP
 
